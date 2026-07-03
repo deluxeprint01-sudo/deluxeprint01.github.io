@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050505" />
+  <title>Deluxe Print — полиграфия в Астане</title>
+  <meta name="description" content="Deluxe Print — печать визиток, баннеров, наклеек, меню, сертификатов и другой полиграфии в Астане." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#050505;
+      --panel:#0d0d0f;
+      --soft:#141417;
+      --line:#24242a;
+      --text:#ffffff;
+      --muted:#aaaab3;
+      --red:#ff1738;
+      --red2:#d80d28;
+      --shadow:0 24px 70px rgba(0,0,0,.45);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Manrope,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea{font:inherit}
+    .container{width:min(1160px,calc(100% - 36px));margin:auto}
+    .nav{position:sticky;top:0;z-index:40;background:rgba(5,5,5,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}
+    .brand-mark{width:42px;height:42px;border-radius:12px;object-fit:cover}
+    .brand span{color:var(--red)}
+    .menu{display:flex;gap:28px;color:#d8d8dd;font-size:14px}
+    .menu a:hover{color:#fff}
+    .nav-cta{background:var(--red);padding:12px 18px;border-radius:12px;font-weight:700;box-shadow:0 10px 30px rgba(255,23,56,.25)}
+    .hero{position:relative;padding:78px 0 70px;isolation:isolate}
+    .hero:before{content:"";position:absolute;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(255,23,56,.2),transparent 68%);right:-120px;top:-120px;z-index:-1}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:56px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 13px;border-radius:999px;border:1px solid #2b2b31;background:#0b0b0d;color:#d7d7dd;font-size:13px;margin-bottom:20px}
+    .dot{width:8px;height:8px;background:var(--red);border-radius:50%;box-shadow:0 0 18px var(--red)}
+    h1{font-size:clamp(46px,7vw,84px);line-height:.98;margin:0 0 24px;letter-spacing:-.055em}
+    h1 em{font-style:normal;color:var(--red)}
+    .lead{font-size:20px;color:var(--muted);max-width:650px;margin-bottom:32px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:14px;font-weight:800;border:1px solid transparent;transition:.25s}
+    .btn-primary{background:var(--red);box-shadow:0 14px 36px rgba(255,23,56,.22)}
+    .btn-primary:hover{transform:translateY(-2px);background:#ff2b48}
+    .btn-secondary{border-color:#2a2a30;background:#0e0e11;color:#eee}
+    .btn-secondary:hover{border-color:#44444c}
+    .hero-card{background:linear-gradient(145deg,#0b0b0d,#151519);border:1px solid #24242a;border-radius:32px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-card:after{content:"";position:absolute;inset:auto -80px -120px auto;width:260px;height:260px;background:radial-gradient(circle,rgba(255,23,56,.22),transparent 68%)}
+    .hero-card img{width:100%;display:block;border-radius:22px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .stat{padding:18px;border-radius:18px;background:#0f0f12;border:1px solid #24242a}
+    .stat b{display:block;font-size:24px;color:#fff}
+    .stat span{font-size:13px;color:var(--muted)}
+    section{padding:86px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px}
+    .kicker{color:var(--red);font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:12px}
+    h2{font-size:clamp(34px,5vw,58px);line-height:1.04;margin:8px 0 0;letter-spacing:-.04em}
+    .section-head p{max-width:480px;color:var(--muted);margin:0}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.25s}
+    .card:hover{transform:translateY(-5px);border-color:#3a3a41}
+    .icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(255,23,56,.1);color:var(--red);font-size:22px;margin-bottom:20px}
+    .card h3{margin:0 0 10px;font-size:21px}
+    .card p{margin:0;color:var(--muted);font-size:15px}
+    .why{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .why-main{background:linear-gradient(145deg,#101013,#0a0a0c);border:1px solid var(--line);border-radius:30px;padding:36px;min-height:390px;position:relative;overflow:hidden}
+    .why-main:after{content:"DP";position:absolute;right:-20px;bottom:-52px;font-size:210px;font-weight:800;color:rgba(255,23,56,.08);letter-spacing:-.1em}
+    .why-main ul{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:16px}
+    .why-main li{display:flex;gap:12px;color:#e4e4e8}
+    .check{color:var(--red);font-weight:900}
+    .why-side{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .mini{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:24px}
+    .mini b{font-size:38px;display:block;color:var(--red);margin-bottom:8px}
+    .mini span{color:var(--muted)}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{padding:24px;border-radius:22px;background:#0d0d10;border:1px solid var(--line)}
+    .step-num{font-size:12px;font-weight:800;color:var(--red);letter-spacing:.15em}
+    .step h3{margin:20px 0 8px}
+    .step p{color:var(--muted);margin:0;font-size:14px}
+    .portfolio{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:250px;gap:16px}
+    .work{border-radius:24px;border:1px solid var(--line);overflow:hidden;position:relative;background:linear-gradient(145deg,#17171b,#0d0d0f)}
+    .work:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,23,56,.28),transparent 40%)}
+    .work.large{grid-row:span 2}
+    .work-content{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
+    .work small{color:#c7c7cf}.work h3{margin:4px 0 0;font-size:25px}
+    .shape{position:absolute;border:2px solid rgba(255,255,255,.18);border-radius:18px;transform:rotate(-12deg)}
+    .shape.one{width:190px;height:270px;right:45px;top:30px}
+    .shape.two{width:150px;height:90px;right:22px;top:28px}
+    .shape.three{width:120px;height:120px;border-radius:50%;right:32px;top:30px}
+    .cta{background:linear-gradient(135deg,#ff1738,#bc0922);border-radius:34px;padding:46px;display:flex;justify-content:space-between;align-items:center;gap:30px;box-shadow:0 25px 70px rgba(255,23,56,.18)}
+    .cta h2{max-width:700px;margin:0}.cta p{margin:12px 0 0;color:#ffe8ed}.cta .btn{background:#fff;color:#111;white-space:nowrap}
+    .contact-grid{display:grid;grid-template-columns:1fr;gap:24px}
+    .contact-card{background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:30px}
+    .contact-item{padding:17px 0;border-bottom:1px solid #24242a}.contact-item:last-child{border-bottom:0}
+    .contact-item small{display:block;color:var(--muted);margin-bottom:5px}
+    .contact-item b{font-size:18px}
+    footer{padding:34px 0 44px;color:#83838c;font-size:14px}.footer-inner{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #202025;padding-top:28px}
+    @media(max-width:900px){.menu{display:none}.hero-grid,.why,.contact-grid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr)}.portfolio{grid-template-columns:1fr 1fr}.work.large{grid-row:span 1;grid-column:span 2}.cta{align-items:flex-start;flex-direction:column}}
+    @media(max-width:600px){.nav-cta{display:none}.hero{padding-top:48px}.services,.process,.portfolio,.why-side,.form-grid{grid-template-columns:1fr}.work.large{grid-column:span 1}.stats{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.cta{padding:30px}.contact-card{padding:22px}.footer-inner{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top"><img class="brand-mark" src="assets/logo.png" alt="Deluxe Print"><div><span>DELUXE</span> PRINT</div></a>
+      <div class="menu"><a href="#services">Услуги</a><a href="#advantages">Преимущества</a><a href="#portfolio">Работы</a><a href="#contacts">Контакты</a></div>
+      <a class="nav-cta" href="#contacts">Рассчитать заказ</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Полиграфия полного цикла в Астане</div>
+          <h1>Печать, которая <em>работает</em> на ваш бизнес</h1>
+          <p class="lead">Создаём дизайн, печатаем и подготавливаем продукцию под ключ — от одной визитки до крупного баннера.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#contacts">Оставить заявку</a><a class="btn btn-secondary" href="#portfolio">Посмотреть работы</a></div>
+          <div class="stats"><div class="stat"><b>1 день</b><span>срочная печать</span></div><div class="stat"><b>100%</b><span>контроль качества</span></div><div class="stat"><b>А4–баннер</b><span>любые форматы</span></div></div>
+        </div>
+        <div class="hero-card"><img src="assets/logo.png" alt="Логотип Deluxe Print"></div>
+      </div>
+    </header>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Наши услуги</div><h2>Всё для вашей рекламы</h2></div><p>Берём на себя дизайн, подготовку макета, печать и послепечатную обработку.</p></div>
+        <div class="services">
+          <article class="card"><div class="icon">▣</div><h3>Визитки и листовки</h3><p>Визитки, флаеры, буклеты, меню, прайс-листы и сертификаты.</p></article>
+          <article class="card"><div class="icon">▱</div><h3>Баннеры и вывески</h3><p>Интерьерные и наружные баннеры, таблички, стенды и указатели.</p></article>
+          <article class="card"><div class="icon">✦</div><h3>Наклейки и стикеры</h3><p>Печать стикеров любой формы, контурная резка и ламинация.</p></article>
+          <article class="card"><div class="icon">A</div><h3>Дизайн макетов</h3><p>Логотипы, фирменный стиль, макеты для социальных сетей и печати.</p></article>
+          <article class="card"><div class="icon">▤</div><h3>Документы и переплёт</h3><p>Печать проектов, брошюровка, прошивка и твёрдый переплёт.</p></article>
+          <article class="card"><div class="icon">↗</div><h3>Срочные заказы</h3><p>Быстрое производство без потери качества для важных сроков.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Почему мы</div><h2>Точно. Быстро. Красиво.</h2></div></div>
+        <div class="why">
+          <div class="why-main"><h3 style="font-size:30px;margin:0">Deluxe Print — партнёр для бизнеса и личных проектов</h3><ul><li><span class="check">✓</span> Проверяем макет перед запуском в печать</li><li><span class="check">✓</span> Помогаем выбрать материал и формат</li><li><span class="check">✓</span> Соблюдаем фирменные цвета и размеры</li><li><span class="check">✓</span> Подготавливаем файлы для печати и резки</li></ul></div>
+          <div class="why-side"><div class="mini"><b>6+</b><span>направлений печати</span></div><div class="mini"><b>24/7</b><span>приём заявок онлайн</span></div><div class="mini"><b>1–3</b><span>варианта дизайна</span></div><div class="mini"><b>∞</b><span>нестандартных идей</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Как мы работаем</div><h2>От заявки до готового тиража</h2></div></div>
+        <div class="process"><div class="step"><div class="step-num">ШАГ 01</div><h3>Заявка</h3><p>Вы отправляете текст, размеры, фото и пример желаемого дизайна.</p></div><div class="step"><div class="step-num">ШАГ 02</div><h3>Макет</h3><p>Мы готовим дизайн, согласовываем детали и вносим правки.</p></div><div class="step"><div class="step-num">ШАГ 03</div><h3>Печать</h3><p>Запускаем утверждённый файл в производство и проверяем качество.</p></div><div class="step"><div class="step-num">ШАГ 04</div><h3>Готово</h3><p>Вы забираете заказ или согласовываете удобный способ доставки.</p></div></div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Портфолио</div><h2>Примеры продукции</h2></div><p>Здесь можно заменить карточки на ваши реальные фотографии работ.</p></div>
+        <div class="portfolio"><div class="work large"><div class="shape one"></div><div class="work-content"><small>Наружная реклама</small><h3>Баннеры и вывески</h3></div></div><div class="work"><div class="shape two"></div><div class="work-content"><small>Фирменный стиль</small><h3>Визитки</h3></div></div><div class="work"><div class="shape three"></div><div class="work-content"><small>Брендинг</small><h3>Наклейки</h3></div></div><div class="work"><div class="shape two"></div><div class="work-content"><small>HoReCa</small><h3>Меню</h3></div></div><div class="work"><div class="shape three"></div><div class="work-content"><small>События</small><h3>Сертификаты</h3></div></div></div>
+      </div>
+    </section>
+
+    <section><div class="container"><div class="cta"><div><h2>Нужен макет или печать уже сегодня?</h2><p>Отправьте задачу — рассчитаем стоимость и предложим лучший вариант.</p></div><a class="btn" href="#contacts">Получить расчёт</a></div></div></section>
+
+    <section id="contacts">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Контакты</div><h2>Обсудим ваш заказ</h2></div><p>Замените телефон, WhatsApp, Instagram и адрес на актуальные данные.</p></div>
+        <div class="contact-grid">
+          <div class="contact-card"><div class="contact-item"><small>Телефон / WhatsApp</small><b>+7 (___) ___-__-__</b></div><div class="contact-item"><small>Instagram</small><b>@deluxeprint01</b></div><div class="contact-item"><small>Город</small><b>Астана, Казахстан</b></div><div class="contact-item"><small>Режим работы</small><b>Ежедневно, 09:00–20:00</b></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div>© 2026 Deluxe Print. Все права защищены.</div><div>Полиграфия и дизайн в Астане</div></div></footer>
+</body>
+</html>
